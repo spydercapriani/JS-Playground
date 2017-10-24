@@ -69,3 +69,16 @@ const hashColors = colors.reduce(
     {}
 )
 console.log(hashColors)
+
+const pureColors = [
+    'red',
+    'red',
+    'green',
+    'blue',
+    'green'
+]
+
+const distinctColors = pureColors.reduce(
+    (distinct, color) => (distinct.indexOf(color) !== -1) ? distinct : [...distinct, color], []
+)
+console.log(distinctColors)
