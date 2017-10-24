@@ -42,3 +42,30 @@ const minAge = ages.reduceRight(
     (min, value) => (value < min) ? value : min, ages[ages.length-1]
 )
 console.log(minAge)
+
+const colors = [
+    {
+        id: '-xekare',
+        title: 'rad red',
+        rating: 3
+    },
+    {
+        id: '-jbwsof',
+        title: 'big blue',
+        rating: 2
+    },
+    {
+        id: '-ryhbhsl',
+        title: 'banana',
+        rating: 1
+    }
+]
+
+const hashColors = colors.reduce(
+    (hash, {id, title, rating}) => {
+        hash[id] = { title, rating }
+        return hash
+    },
+    {}
+)
+console.log(hashColors)
